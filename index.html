@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mirqədirli Mirsalam – CV</title>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icon kitabxanası -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Fon effektləri -->
+  <div class="bg-orbit bg-orbit-1"></div>
+  <div class="bg-orbit bg-orbit-2"></div>
+
+  <div class="shell">
+    <!-- Üst hissə -->
+    <header class="top-bar">
+      <div class="brand">
+        <div class="brand-logo">AS</div>
+        <div class="brand-text">
+          <span class="brand-name" data-t="brand_name">Mirqədirli Mirsalam</span>
+          <span class="brand-sub" data-t="brand_sub">Cyber Security Student</span>
+        </div>
+      </div>
+
+      <div class="top-actions">
+        <span class="badge-available" data-t="badge_available">
+          <span class="dot"></span> İş təkliflərinə açığam
+        </span>
+
+        <!-- Dil dəyişmə düyməsi -->
+        <div class="lang-switch">
+          <button data-lang="az" class="lang-btn active">AZ</button>
+          <span class="divider">|</span>
+          <button data-lang="en" class="lang-btn">EN</button>
+        </div>
+
+        <!-- PDF əvəzinə sadəcə əlaqə düyməsi -->
+        <a class="top-download" href="mailto:mirgadirlimirsalam@gmail.com">
+          <i class="fa-solid fa-paper-plane"></i>
+          <span data-t="top_contact">Mənə yaz</span>
+        </a>
+      </div>
+    </header>
+
+    <main class="layout">
+      <!-- SOL PANEL – profil kartı -->
+      <aside class="panel-left">
+        <div class="profile-card glass">
+          <div class="avatar-ring">
+            <!-- Profil şəklin varsa, assets/profile.jpg qoy; yoxdursa bu img tagını silə bilərsən -->
+            <img src="profile.jpeg" alt="Profil şəkli" class="avatar-img" />
+          </div>
+          <h1 class="profile-name" data-t = "profile_name">Mirqədirli Mirsalam</h1>
+          <p class="profile-role" data-t="role_title">
+            Cyber Security Student · Junior IT
+          </p>
+
+          <div class="profile-tags">
+            <span>Cyber Security</span>
+            <span>Networking</span>
+            <span>IT Support</span>
+          </div>
+
+          <div class="profile-meta">
+            <div>
+              <i class="fa-solid fa-location-dot"></i>
+              <span data-t="location_text">Bakı, Azərbaycan</span>
+            </div>
+            <div>
+              <i class="fa-solid fa-graduation-cap"></i>
+              <span data-t="edu_short">
+                Kiber Təhlükəsizlik (Təhsil davam edir)
+              </span>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="contact-list">
+            <a href="mailto:alisafarov2026@gmail.com">
+              <i class="fa-solid fa-envelope"></i>
+              <span>mirgadirlimirsalam@gmail.com</span>
+            </a>
+            <a href=""
+               target="_blank"
+               rel="noopener noreferrer">
+              <i class="fa-brands fa-linkedin"></i>
+              <span data-t="linkedin_text">LinkedIn</span>
+            </a>
+            <a href="" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-github"></i>
+              <span>GitHub</span>
+            </a>
+          </div>
+
+          <!-- Əsas Call-to-Action: mail -->
+          <button class="primary-btn w-full"
+                  onclick="window.location.href='mailto:mirgadirlimirsalam@gmail.com'">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span data-t="contact_btn">İş təklifi üçün əlaqə</span>
+          </button>
+        </div>
+
+        <div class="mini-section glass">
+          <h3>
+            <i class="fa-solid fa-user-shield"></i>
+            <span data-t="focus_title">Fokus sahələrim</span>
+          </h3>
+          <ul>
+            <li data-t="focus_1">Şəbəkə və təhlükəsizlik əsasları</li>
+            <li data-t="focus_2">Praktiki IT dəstək və ofis mühiti</li>
+            <li data-t="focus_3">Davamlı özünüinkişaf və öyrənmə</li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- SAĞ PANEL – əsas məzmun -->
+      <section class="panel-right">
+        <!-- Naviqasiya -->
+        <nav class="scroll-nav glass">
+          <a href="#about">
+            <i class="fa-solid fa-circle-user"></i>
+            <span data-t="nav_about">Haqqımda</span>
+          </a>
+          <a href="#education">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span data-t="nav_education">Təhsil</span>
+          </a>
+          <a href="#experience">
+            <i class="fa-solid fa-briefcase"></i>
+            <span data-t="nav_experience">İş</span>
+          </a>
+          <a href="#skills">
+            <i class="fa-solid fa-code"></i>
+            <span data-t="nav_skills">Bacarıqlar</span>
+          </a>
+          <a href="#languages">
+            <i class="fa-solid fa-language"></i>
+            <span data-t="nav_languages">Dillər</span>
+          </a>
+        </nav>
+
+        <!-- Haqqımda -->
+        <section id="about" class="card glass">
+          <div class="card-header">
+            <h2 data-t="about_title">Haqqımda</h2>
+          </div>
+          <p class="lead" data-t="about_text1">
+            Kiber Təhlükəsizlik ixtisası üzrə təhsil alan, şəbəkə və IT sahəsinə
+            xüsusi marağı olan tələbəyəm. Texniki biliklərimi real ofis mühitində
+            tətbiq etmək və komanda ilə işləyərək təcrübəmi artırmaq istəyirəm.
+          </p>
+          <p data-t="about_text2">
+            MS Office, əsas proqramlaşdırma (Python, HTML, CSS,C++) və
+            şəbəkə biliklərim sayəsində junior səviyyəli IT, texniki dəstək və ya
+            ofis vəzifələrində məsuliyyətli şəkildə çalışmağa hazıram.
+          </p>
+
+          <div class="pill-row">
+            <span class="pill soft" data-t="pill_fulltime">Tam məşğulluq</span>
+            <span class="pill soft" data-t="pill_parttime">Part-time uyğundur</span>
+          </div>
+        </section>
+
+        <!-- Təhsil -->
+        <section id="education" class="card glass">
+          <div class="card-header">
+            <h2 data-t="education_title">Təhsil</h2>
+          </div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-top">
+                  <h3 data-t="edu_title">Kiber Təhlükəsizlik (Bakalavr)</h3>
+                  <span class="time-tag" data-t="edu_time">2025 -2029 – davam edir</span>
+                </div>
+                <p class="muted" data-t="edu_desc">
+                  Bakı, Azərbaycan – Şəbəkə, təhlükəsizlik, əməliyyat sistemləri və
+                  praktiki laboratoriya tapşırıqları üzrə təhsil alıram.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- İş təcrübəsi -->
+        <!-- <section id="experience" class="card glass">
+          <div class="card-header">
+            <h2 data-t="experience_title">İş təcrübəsi</h2>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-top">
+                  <h3 data-t="job_title">Satıcı–Kassir – Al Market</h3>
+                  <span class="time-tag" data-t="job_time">2025 - 2026</span>
+                </div>
+                <p data-t="job_desc">
+                  Müştəri xidməti, kassa əməliyyatları, mal qəbulu və vitrin düzülüşü.
+                </p>
+                <ul class="bullet-list">
+                  <li data-t="job_b1">Müştərilərlə nəzakətli və operativ ünsiyyət.</li>
+                  <li data-t="job_b2">Nağd və kart ödənişlərinin dəqiq idarə olunması.</li>
+                  <li data-t="job_b3">Komanda ilə işləmə və yüksək məsuliyyətli yanaşma.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section> -->
+
+        <!-- Bacarıqlar -->
+        <section id="skills" class="card glass">
+          <div class="card-header">
+            <h2 data-t="skills_title">Bacarıqlar</h2>
+          </div>
+
+          <div class="skills-grid">
+            <div class="skill-group">
+              <h3>
+                <i class="fa-solid fa-desktop"></i>
+                <span data-t="skills_group1">Ofis & Ümumi IT</span>
+              </h3>
+              <div class="tag-row">
+                <span>MS Word</span>
+                <span>MS Excel</span>
+                <span>PowerPoint</span>
+                <span>Windows OS</span>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <h3>
+                <i class="fa-solid fa-terminal"></i>
+                <span data-t="skills_group2">Proqramlaşdırma & Sistem</span>
+              </h3>
+              <div class="tag-row">
+                <span>Python (Basic)</span>
+                <span>HTML &amp; CSS</span>
+                <span>JavaScript (Basic)</span>
+                <span>Linux terminal</span>
+                <span>Windows CMD</span>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <h3>
+                <i class="fa-solid fa-network-wired"></i>
+                <span data-t="skills_group3">Şəbəkə & Təhlükəsizlik</span>
+              </h3>
+              <div class="tag-row">
+                <span>Networking fundamentals</span>
+                <span>TCP/IP, OSI modeli</span>
+                <span>IP addressing, NAT</span>
+                <span>OWASP Top 10 bilikləri</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Dillər -->
+        <section id="languages" class="card glass">
+          <div class="card-header">
+            <h2 data-t="languages_title">Dil bilikləri</h2>
+          </div>
+
+          <div class="lang-list">
+            <div class="lang-item">
+              <span class="lang-name" data-t="lang_az_name">Azərbaycan dili</span>
+              <span class="lang-level" data-t="lang_az_level">Ana dili</span>
+              <div class="lang-bar"><span style="width: 100%;"></span></div>
+            </div>
+            <div class="lang-item">
+              <span class="lang-name" data-t="lang_tr_name">Türk dili</span>
+              <span class="lang-level" data-t="lang_tr_level">Yaxşı</span>
+              <div class="lang-bar"><span style="width: 85%;"></span></div>
+            </div>
+            <div class="lang-item">
+              <span class="lang-name" data-t="lang_en_name">İngilis dili</span>
+              <span class="lang-level" data-t="lang_en_level">Orta</span>
+              <div class="lang-bar"><span style="width: 40%;"></span></div>
+            </div>
+            <div class="lang-item">
+              <span class="lang-name" data-t="lang_ru_name">Rus dili</span>
+              <span class="lang-level" data-t="lang_ru_level">Başlanğıc</span>
+              <div class="lang-bar"><span style="width: 15%;"></span></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+          <span>© <span id="year"></span> Əli Səfərov · CV</span>
+          <span class="footer-note" data-t="footer_note">
+            Online CV – link kimi paylaşmaq üçün nəzərdə tutulub
+          </span>
+        </footer>
+      </section>
+    </main>
+  </div>
+
+  <!-- Dil sistemi + il -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const translations = {
+      az: {
+        brand_name: "Mirqədirli Mirsalam",
+        profile_name:"Mirqədirli Mirsalam",
+        brand_sub: "Cyber Security Student",
+        badge_available: "İş təkliflərinə açığam",
+        top_contact: "Mənə yaz",
+        role_title: "Cyber Security Student · Junior IT",
+        location_text: "Bakı, Azərbaycan",
+        edu_short: "Kiber Təhlükəsizlik (Təhsil davam edir)",
+
+        focus_title: "Fokus sahələrim",
+        focus_1: "Şəbəkə və təhlükəsizlik əsasları",
+        focus_2: "Praktiki IT dəstək və ofis mühiti",
+        focus_3: "Davamlı özünüinkişaf və öyrənmə",
+
+        nav_about: "Haqqımda",
+        nav_education: "Təhsil",
+        nav_experience: "İş",
+        nav_skills: "Bacarıqlar",
+        nav_languages: "Dillər",
+
+        about_title: "Haqqımda",
+        about_text1: "Kiber Təhlükəsizlik ixtisası üzrə təhsil alan, şəbəkə və IT sahəsinə xüsusi marağı olan tələbəyəm. Texniki biliklərimi real ofis mühitində tətbiq etmək və komanda ilə işləyərək təcrübəmi artırmaq istəyirəm.",
+        about_text2: "MS Office, əsas proqramlaşdırma (Python, HTML, CSS, JavaScript) və şəbəkə biliklərim sayəsində junior səviyyəli IT, texniki dəstək və ya ofis vəzifələrində məsuliyyətli şəkildə çalışmağa hazıram.",
+        pill_fulltime: "Tam məşğulluq",
+        pill_parttime: "Part-time uyğundur",
+
+        education_title: "Təhsil",
+        edu_title: "Kiber Təhlükəsizlik (Bakalavr)",
+        edu_time: "2025 - 2029 – davam edir",
+        edu_desc: "Bakı, Azərbaycan – Şəbəkə, təhlükəsizlik, əməliyyat sistemləri və praktiki laboratoriya tapşırıqları üzrə təhsil alıram.",
+
+        experience_title: "İş təcrübəsi",
+        job_title: "Yoxdur",
+        job_time: "",
+        job_desc: "",
+        job_b1: ".",
+        job_b2: "",
+        job_b3: "",
+
+        skills_title: "Bacarıqlar",
+        skills_group1: "Ofis & Ümumi IT",
+        skills_group2: "Proqramlaşdırma & Sistem",
+        skills_group3: "Şəbəkə & Təhlükəsizlik",
+
+        languages_title: "Dil bilikləri",
+        lang_az_name: "Azərbaycan dili",
+        lang_az_level: "Ana dili",
+        lang_tr_name: "Türk dili",
+        lang_tr_level: "Yaxşı",
+        lang_en_name: "İngilis dili",
+        lang_en_level: "Orta",
+        lang_ru_name: "Rus dili",
+        lang_ru_level: "Başlanğıc",
+
+        linkedin_text: "LinkedIn",
+        contact_btn: "İş təklifi üçün əlaqə",
+        footer_note: "Online CV – link kimi paylaşmaq üçün nəzərdə tutulub"
+      },
+
+      en: {
+        brand_name:"Mirgadirli Mirsalam",
+        profile_name:"Mirgadirli Mirsalam",
+        brand_sub: "Cyber Security Student",
+        badge_available: "Open to job opportunities",
+        top_contact: "Contact me",
+        role_title: "Cyber Security Student · Junior IT",
+        location_text: "Baku, Azerbaijan",
+        edu_short: "Cyber Security (Ongoing studies)",
+
+        focus_title: "My focus areas",
+        focus_1: "Networking and security fundamentals",
+        focus_2: "Practical IT support and office environment",
+        focus_3: "Continuous self-development and learning",
+
+        nav_about: "About",
+        nav_education: "Education",
+        nav_experience: "Experience",
+        nav_skills: "Skills",
+        nav_languages: "Languages",
+
+        about_title: "About Me",
+        about_text1: "I am a Cyber Security student with a strong interest in networking and IT. I want to apply my technical knowledge in a real office environment and grow by working with a team.",
+        about_text2: "With experience in MS Office, basic programming (Python, HTML, CSS,C++ ) and networking, I am ready to work in junior IT, technical support or office roles with responsibility.",
+        pill_fulltime: "Full-time",
+        pill_parttime: "Part-time friendly",
+
+        education_title: "Education",
+        edu_title: "Cyber Security (Bachelor)",
+        edu_time: "2025 - 2029 – Present",
+        edu_desc: "Baku, Azerbaijan – Studying networking, security, operating systems and working on practical lab assignments.",
+
+        experience_title: "Experience",
+        job_title: "",
+        job_time: "",
+        job_desc: "",
+        job_b1: "",
+        job_b2: "",
+        job_b3: "",
+
+        skills_title: "Skills",
+        skills_group1: "Office & General IT",
+        skills_group2: "Programming & Systems",
+        skills_group3: "Networking & Security",
+
+        languages_title: "Languages",
+        lang_az_name: "Azerbaijani",
+        lang_az_level: "Native",
+        lang_tr_name: "Turkish",
+        lang_tr_level: "Good",
+        lang_en_name: "English",
+        lang_en_level: "Basic",
+        lang_ru_name: "Russian",
+        lang_ru_level: "Beginner",
+
+        linkedin_text: "LinkedIn",
+        contact_btn: "Contact for job opportunities",
+        footer_note: "Online CV – made to be shared as a link"
+      }
+    };
+
+    function applyLanguage(lang) {
+      const dict = translations[lang];
+      Object.entries(dict).forEach(([key, value]) => {
+        document.querySelectorAll(`[data-t="${key}"]`).forEach(el => {
+          el.textContent = value;
+        });
+      });
+    }
+
+    // Dil düymələri
+    const langButtons = document.querySelectorAll(".lang-btn");
+    langButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const lang = btn.dataset.lang;
+
+        langButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        applyLanguage(lang);
+      });
+    });
+
+    // Səhifə açılarkən default AZ
+    applyLanguage("az");
+  </script>
+</body>
+</html>
