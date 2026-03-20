@@ -308,156 +308,139 @@
     </main>
   </div>
 
-  <!-- Dil sistemi + il -->
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+ <script>
 
-    const translations = {
-      az: {
-        brand_name: "Mirqədirli Mirsalam",
-        profile_name:"Mirqədirli Mirsalam",
-        brand_sub: "Cyber Security Student",
-        badge_available: "İş təkliflərinə açığam",
-        top_contact: "Mənə yaz",
-        role_title: "Cyber Security Student · Junior IT",
-        location_text: "Bakı, Azərbaycan",
-        edu_short: "Kiber Təhlükəsizlik (Təhsil davam edir)",
+// footer year (sadə şeydi amma nədənsə həmişə ayrıca yazıram 😄)
+var y = document.getElementById("year");
+if (y) {
+    var d = new Date();
+    y.innerText = d.getFullYear();   // textContent da olardı amma fərqi yoxdu
+}
 
-        focus_title: "Fokus sahələrim",
-        focus_1: "Şəbəkə və təhlükəsizlik əsasları",
-        focus_2: "Praktiki IT dəstək və ofis mühiti",
-        focus_3: "Davamlı özünüinkişaf və öyrənmə",
 
-        nav_about: "Haqqımda",
-        nav_education: "Təhsil",
-        nav_experience: "İş",
-        nav_skills: "Bacarıqlar",
-        nav_languages: "Dillər",
+// translations (bunu bəlkə sonra json-a çıxardaram... hələlik belə qalsın)
+var langs = {
+  az: {
+    brand_name: "Mirqədirli Mirsalam",
+    profile_name: "Mirqədirli Mirsalam",
+    brand_sub: "Cyber Security Student",
+    badge_available: "İş təkliflərinə açığam",
+    top_contact: "Mənə yaz",
+    role_title: "Cyber Security Student · Junior IT",
+    location_text: "Bakı, Azərbaycan",
+    edu_short: "Kiber Təhlükəsizlik (Təhsil davam edir)",
 
-        about_title: "Haqqımda",
-        about_text1: "Kiber Təhlükəsizlik ixtisası üzrə təhsil alan, şəbəkə və IT sahəsinə xüsusi marağı olan tələbəyəm. Texniki biliklərimi real ofis mühitində tətbiq etmək və komanda ilə işləyərək təcrübəmi artırmaq istəyirəm.",
-        about_text2: "MS Office, əsas proqramlaşdırma (Python, HTML, CSS, JavaScript) və şəbəkə biliklərim sayəsində junior səviyyəli IT, texniki dəstək və ya ofis vəzifələrində məsuliyyətli şəkildə çalışmağa hazıram.",
-        pill_fulltime: "Tam məşğulluq",
-        pill_parttime: "Part-time uyğundur",
+    focus_title: "Fokus sahələrim",
+    focus_1: "Şəbəkə və təhlükəsizlik əsasları",
+    focus_2: "Praktiki IT dəstək və ofis mühiti",
+    focus_3: "Davamlı özünüinkişaf və öyrənmə",
 
-        education_title: "Təhsil",
-        edu_title: "Kiber Təhlükəsizlik (Bakalavr)",
-        edu_time: "2025 - 2029 – davam edir",
-        edu_desc: "Bakı, Azərbaycan – Şəbəkə, təhlükəsizlik, əməliyyat sistemləri və praktiki laboratoriya tapşırıqları üzrə təhsil alıram.",
+    nav_about: "Haqqımda",
+    nav_education: "Təhsil",
+    nav_experience: "İş",
+    nav_skills: "Bacarıqlar",
+    nav_languages: "Dillər",
 
-        experience_title: "İş təcrübəsi",
-        job_title: "Yoxdur",
-        job_time: "",
-        job_desc: "",
-        job_b1: ".",
-        job_b2: "",
-        job_b3: "",
+    about_title: "Haqqımda",
+    about_text1: "Kiber Təhlükəsizlik ixtisası üzrə təhsil alan tələbəyəm.",
+    about_text2: "Python, HTML, CSS və şəbəkə üzrə baza biliklərim var.",
+    
+    skills_title: "Bacarıqlar",
+    languages_title: "Dil bilikləri",
 
-        skills_title: "Bacarıqlar",
-        skills_group1: "Ofis & Ümumi IT",
-        skills_group2: "Proqramlaşdırma & Sistem",
-        skills_group3: "Şəbəkə & Təhlükəsizlik",
+    contact_btn: "Əlaqə saxla"
+  },
 
-        languages_title: "Dil bilikləri",
-        lang_az_name: "Azərbaycan dili",
-        lang_az_level: "Ana dili",
-        lang_tr_name: "Türk dili",
-        lang_tr_level: "Yaxşı",
-        lang_en_name: "İngilis dili",
-        lang_en_level: "Orta",
-        lang_ru_name: "Rus dili",
-        lang_ru_level: "Başlanğıc",
+  en: {
+    brand_name: "Mirgadirli Mirsalam",
+    profile_name: "Mirgadirli Mirsalam",
+    brand_sub: "Cyber Security Student",
+    badge_available: "Open to jobs",
+    top_contact: "Contact me",
+    role_title: "Cyber Security Student · Junior IT",
+    location_text: "Baku, Azerbaijan",
+    edu_short: "Cyber Security (studying)",
 
-        linkedin_text: "LinkedIn",
-        contact_btn: "İş təklifi üçün əlaqə",
-        footer_note: "Online CV – link kimi paylaşmaq üçün nəzərdə tutulub"
-      },
+    focus_title: "Focus",
+    focus_1: "Networking basics",
+    focus_2: "IT support",
+    focus_3: "Learning",
 
-      en: {
-        brand_name:"Mirgadirli Mirsalam",
-        profile_name:"Mirgadirli Mirsalam",
-        brand_sub: "Cyber Security Student",
-        badge_available: "Open to job opportunities",
-        top_contact: "Contact me",
-        role_title: "Cyber Security Student · Junior IT",
-        location_text: "Baku, Azerbaijan",
-        edu_short: "Cyber Security (Ongoing studies)",
+    nav_about: "About",
+    nav_education: "Education",
+    nav_experience: "Experience",
+    nav_skills: "Skills",
+    nav_languages: "Languages",
 
-        focus_title: "My focus areas",
-        focus_1: "Networking and security fundamentals",
-        focus_2: "Practical IT support and office environment",
-        focus_3: "Continuous self-development and learning",
+    about_title: "About",
+    about_text1: "Cyber security student interested in IT.",
+    about_text2: "Basic knowledge of programming and networking.",
 
-        nav_about: "About",
-        nav_education: "Education",
-        nav_experience: "Experience",
-        nav_skills: "Skills",
-        nav_languages: "Languages",
+    skills_title: "Skills",
+    languages_title: "Languages",
 
-        about_title: "About Me",
-        about_text1: "I am a Cyber Security student with a strong interest in networking and IT. I want to apply my technical knowledge in a real office environment and grow by working with a team.",
-        about_text2: "With experience in MS Office, basic programming (Python, HTML, CSS,C++ ) and networking, I am ready to work in junior IT, technical support or office roles with responsibility.",
-        pill_fulltime: "Full-time",
-        pill_parttime: "Part-time friendly",
+    contact_btn: "Contact"
+  }
+};
 
-        education_title: "Education",
-        edu_title: "Cyber Security (Bachelor)",
-        edu_time: "2025 - 2029 – Present",
-        edu_desc: "Baku, Azerbaijan – Studying networking, security, operating systems and working on practical lab assignments.",
 
-        experience_title: "Experience",
-        job_title: "",
-        job_time: "",
-        job_desc: "",
-        job_b1: "",
-        job_b2: "",
-        job_b3: "",
+// bütün data-t elementləri götürürəm (bir dəfə etmək daha yaxşıdı)
+var items = document.querySelectorAll("[data-t]");
 
-        skills_title: "Skills",
-        skills_group1: "Office & General IT",
-        skills_group2: "Programming & Systems",
-        skills_group3: "Networking & Security",
 
-        languages_title: "Languages",
-        lang_az_name: "Azerbaijani",
-        lang_az_level: "Native",
-        lang_tr_name: "Turkish",
-        lang_tr_level: "Good",
-        lang_en_name: "English",
-        lang_en_level: "Basic",
-        lang_ru_name: "Russian",
-        lang_ru_level: "Beginner",
+// dil dəyişən funksiya
+function setLang(l) {
 
-        linkedin_text: "LinkedIn",
-        contact_btn: "Contact for job opportunities",
-        footer_note: "Online CV – made to be shared as a link"
-      }
-    };
-
-    function applyLanguage(lang) {
-      const dict = translations[lang];
-      Object.entries(dict).forEach(([key, value]) => {
-        document.querySelectorAll(`[data-t="${key}"]`).forEach(el => {
-          el.textContent = value;
-        });
-      });
+    // bəzən undefined olur deyə yoxlayıram
+    var current = langs[l];
+    if (!current) {
+        current = langs.az; // fallback
     }
 
-    // Dil düymələri
-    const langButtons = document.querySelectorAll(".lang-btn");
-    langButtons.forEach(btn => {
-      btn.addEventListener("click", () => {
-        const lang = btn.dataset.lang;
+    // köhnə üsulla dövr (map/filter yazmaq istəmədim 😅)
+    for (var i = 0; i < items.length; i++) {
 
-        langButtons.forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
+        var el = items[i];
+        var k = el.getAttribute("data-t");
 
-        applyLanguage(lang);
-      });
+        if (!k) continue; // ehtiyat üçün
+
+        // əgər key varsa dəyiş, yoxdursa olduğu kimi saxla
+        if (current[k]) {
+            el.innerText = current[k];
+        } else {
+            // heç nə etmirəm
+            // bəlkə sonra log əlavə edərəm
+        }
+    }
+}
+
+
+// düymələr
+var btns = document.querySelectorAll(".lang-btn");
+
+// burada bir az qarışıq yazdım amma işləyir 🤷‍♂️
+for (var i = 0; i < btns.length; i++) {
+
+    btns[i].addEventListener("click", function() {
+
+        var selectedLang = this.getAttribute("data-lang");
+
+        // active class dəyişmək
+        for (var j = 0; j < btns.length; j++) {
+            btns[j].classList.remove("active");
+        }
+
+        this.classList.add("active");
+
+        setLang(selectedLang);
+
+        // console.log(selectedLang); // debug üçün idi, hələlik söndürdüm
     });
+}
 
-    // Səhifə açılarkən default AZ
-    applyLanguage("az");
-  </script>
-</body>
-</html>
+
+// default dil (bunu localStorage ilə etmək olar gələcəkdə)
+setLang("az");
+
+</script>
